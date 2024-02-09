@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import NavBrowser from "../components/NavBrowser";
 
-function App() {
 
-  const apiKey = `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=a4f5b4223f9e3010cc74e81538e9200e2410e3319a1c21bba5dfb7acc7a8e4bb&from=2024-02-08&to=2024-02-08`;
+export default function Home(){
+
+    const apiKey = `https://apiv2.allsportsapi.com/football/?met=Fixtures&APIkey=a4f5b4223f9e3010cc74e81538e9200e2410e3319a1c21bba5dfb7acc7a8e4bb&from=2024-02-08&to=2024-02-08`;
 
   const [info, setInfo] = useState(null)
 
@@ -27,11 +29,12 @@ function App() {
 
   console.log(info)
 
-  return (
-    <div className="App">
-        <h1>Hello word here i GO!!</h1>
-    </div>
-  );
-}
 
-export default App;
+
+    return (
+        <div>
+            <NavBrowser/>
+            <h1>Home</h1>
+        </div>
+    )
+}
